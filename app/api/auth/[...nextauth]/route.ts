@@ -33,6 +33,7 @@ const handler = NextAuth({
 
     async session({ session, token }) {
       if (token) {
+        // @ts-ignore
         session.user.id = token.id;
       }
       return session;
