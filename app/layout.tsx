@@ -1,6 +1,6 @@
 "use client";
-import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 import { SessionProvider } from "next-auth/react";
 
 export default function RootLayout({
