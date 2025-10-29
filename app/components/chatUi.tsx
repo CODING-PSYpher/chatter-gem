@@ -13,6 +13,7 @@ type Message = {
 };
 
 export default function ChatUI() {
+  const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "m1",
@@ -35,7 +36,6 @@ export default function ChatUI() {
   }
 
   function LogOutBTN() {
-    const router = useRouter();
     localStorage.removeItem("token");
     router.push("/");
   }
